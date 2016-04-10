@@ -1,0 +1,234 @@
+/* --------------------------------------
+   Import Bootstrap & fonts
+      -------------------------------------- */
+@import "bootstrap"
+@import url(https://fonts.googleapis.com/css?family=Raleway)
+@import url(https://fonts.googleapis.com/css?family=Lato)
+
+/* --------------------------------------
+   Variables
+      -------------------------------------- */
+$font-family: "Raleway"
+$blue-twitter : #1372b3
+$blue-facebook : #0c2e3d
+/* --------------------------------------
+   General
+      -------------------------------------- */
+body 
+	background-image: url("../img/background.png")
+	background-repeat: no-repeat
+	background-size: cover
+	font-family: $font-family
+a,a:hover,a:link,a:visited,a:active
+	color: inherit
+	text-decoration: none
+	outline: none
+.row
+	margin: 0px 0px
+	padding: 0px 0px
+/* --------------------------------------
+   Header
+      -------------------------------------- */
+.top-header
+	color: white
+	line-height: 29px
+	font-weight: bold
+	font-size: 14.67px
+	margin: 0px 0px
+.top-facebook
+	@include make-xs-column(6)
+	@include make-md-column(9)
+	height: 29px
+	background-color: $blue-facebook
+	text-align: right
+.top-twitter
+	@include make-xs-column(6)
+	@include make-md-column(3)
+	height: 29px	
+	background-color: $blue-twitter
+	text-align: left
+.navbar-toggle
+	background-color: transparent
+	position: relative
+	z-index: 1646
+	width: 30px 
+	height: 30px
+	border: 2px solid $blue-facebook
+
+.main-nav
+	// @extend .navbar 
+	// @extend .navbar-fixed-top
+	height: 78px
+	background-color: white
+	margin: 0px 0px
+	line-height: 78px
+	position: relative
+	.site-logo
+		@include make-md-column(3)
+		padding: 0
+	.site-navmenu
+		@include make-md-column(7)
+		padding: 0
+		ul
+			margin-top: 0
+			margin-bottom: 0
+			padding: 0
+			li
+				height: 78px
+				display: inline
+				text-decoration: none
+				font-weight: bold
+				padding: 0px 10px
+				color: $blue-facebook
+				font-size: 14.67px
+				&:first-child
+					padding-left: 0
+				&:last-child
+					padding-right: 0
+				a:hover
+					background-color: #f4f8f9
+					color: $blue-twitter
+
+	.register
+		@include make-md-column(1)
+		padding: 0
+		background-color: #f4f8f9
+		width: 86px
+		height: 78px
+		line-height: 78px
+	.login
+		@include make-md-column(1)
+		padding: 0
+		background-color: #e9f1f3
+		width: 86px
+		height: 78px
+		line-height: 78px
+.banner
+	vertical-align: center
+	h1
+		font-size: 38.17px
+		text-shadow: 0px 0px 11px rgba(8, 9, 9, 0.53)
+		font-weight: bold
+		color: white
+		padding-top: 270px
+.shadow
+	background-color: rgb(10, 20, 34)
+	box-shadow: 0px 1px 3px 0px rgba(8, 9, 9, 0.18)
+	width: 55.5%
+	height: 76px
+	opacity: 0.902
+	margin-top: 30px
+	vertical-align: middle
+button
+	vertical-align: middle
+	border-radius: 6px
+	background-color: rgb(14, 102, 199)
+	width: 141px
+	height: 42px
+	font-weight: bold
+	color: white
+	font-size: 16px
+	float: right
+	margin-right: 27px
+	opacity: 1
+	margin-top: 17px
+.elipse
+	padding-top: 302px
+	position: relative
+	z-index: 100000
+input
+	background-color: inherit
+	border: 2px solid $blue-facebook 
+	color: white
+	border-right: none
+	border-top: none
+	border-left: none
+	width: 279px
+	float: left
+	padding-left: 15px
+	padding-right: 15px
+	margin-top: 35px
+	margin-left: 35px
+input:focus
+	border-bottom-color: $blue-twitter 	
+.date
+	background-color: inherit
+	margin-right: 80px
+/* --------------------------------------
+   SECTION 1
+   -------------------------------------- */
+
+.boglex
+	background-image: url("../img/back1.png")
+	background-repeat: no-repeat
+	background-size: cover
+	width: 100%
+	height: 907px
+	margin-top: -44px
+	.what_is
+		@include make-md-column(6)
+		padding-top: 374px
+		padding-left: 200px
+		h1
+			color: rgb(19, 114, 179)  
+			font-size: 45.13px
+			font-family: $font-family
+			font-weight: bold
+			text-align: left
+		p
+			font-size: 13px
+			font-family: "Lato"
+			color: rgb(64, 64, 64)
+			padding-left: 200pxsss
+			text-align: left
+	.boglex-img
+		@include make-md-column(6)
+		padding-left: 0px
+		padding-right: 0px
+		padding-top: 194px
+/* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+// /* Portrait & landscape phone */
+// @media (max-width: 480px)
+// Landscape phone to portrait tablet
+// @media (max-width: 768px) 
+// /* Large desktop */
+// @media (min-width: 1200px) 
+
+@media (max-width: 768px) 
+	.main-nav
+		height: 100px
+		background-color: white
+		margin: 0px 0px
+		line-height: 100px
+		.site-logo
+			@include make-xs-column(12)
+		.site-navmenu
+			@include make-xs-column(12)
+			li
+				display: block
+				text-decoration: none
+				font-weight: bold
+				padding: 0px 1%
+				color: $blue-facebook
+				font-size: 14.67px
+				a:hover
+					background-color: #f4f8f9
+		.register
+			@include make-xs-column(12)
+			background-color: #f4f8f9
+			width: auto
+			height: auto
+		.login
+			@include make-xs-column(12)
+			background-color: #e9f1f3
+			width: auto
+			height: auto
+			
+@media (min-width: $screen-sm) 
+
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+@media (min-width: $screen-md) 
+
